@@ -3,9 +3,28 @@
   <head>
     <title>repol</title>
   </head>
+  <style>
+    .pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+  </style>
   <body>
-    <object data="page-accueil.pdf" type="application/pdf" width="100%" height="100%">
+    <object class="pdf" data="page-accueil.pdf" type="application/pdf">
       <p>Unable to display PDF file. <a href="page-accueil.pdf">Download</a> instead.</p>
     </object>
+    <iframe class="pdf" data="page-accueil.pdf" type="application/pdf">
+      <p>Unable to display PDF file. <a href="page-accueil.pdf">Download</a> instead.</p>
+    </iframe>
+    <embed class="pdf" data="page-accueil.pdf" type="application/pdf">
+      <p>Unable to display PDF file. <a href="page-accueil.pdf">Download</a> instead.</p>
+    </embed>
   </body>
 </html>
